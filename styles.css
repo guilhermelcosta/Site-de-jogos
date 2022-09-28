@@ -313,8 +313,6 @@
     height: 130px;
 }
 
-
-
 @media screen and (min-width: 315px) and (max-width:915px) {
     .menu_principal {
         position: fixed;
@@ -482,7 +480,6 @@
     .area_lancamento .video_lancamento {
         width: 220px;
     }
-
     
     .area_plataforma,
     .area_publisher {
@@ -503,3 +500,10 @@
         display: none;
     }
 }
+
+@media screen and (min-width: 1401px) and (max-width:1600px) {
+    .video_carrossel {
+        width: 700px;
+    }
+}
+
