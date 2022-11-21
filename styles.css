@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
+  text-decoration: none !important;
   list-style: none;
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@
   --cor_primaria: #171a21;
   --cor_secundaria: #0457aa;
   --cor_terciaria: #7c8ea3;
-  --cor_destaque: #0775e2;
+  --cor_destaque: #1e87f0;
 }
 
 /** Cabeçalho e menu de navegação */
@@ -45,12 +45,26 @@ header {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  background: linear-gradient(
+      to right,
+      var(--cor_primaria),
+      var(--cor_destaque)
+    ),
+    linear-gradient(
+      to right,
+      var(--cor_destaque),
+      var(--cor_destaque),
+      rgba(255, 0, 180, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
 }
 
 .menu_principal ul li a:hover {
-  color: var(--cor_terciaria);
-  text-decoration: underline;
-  transition: all 0.2s;
+  color: white;
+  background-size: 0 3px, 100% 3px;
 }
 
 .menu_principal ul li a:active {
@@ -126,15 +140,17 @@ main {
   font-weight: bold;
 }
 
-/* Lançamentos */
-.lancamentos {
+/* Área de lançamentos */
+.sessao {
   margin-top: 30px;
   padding: 30px 0;
 }
 
-.lancamentos h3 {
-  color: var(--cor_destaque);
+.sessao h3 {
+  color: white;
+  font-size: 1.5em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .botao_ordenar {
@@ -149,42 +165,65 @@ main {
   border: 2px solid var(--cor_terciaria);
 }
 
-.cards_lancamento,
+.area_lancamento {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card_lancamento {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 1%;
+  text-align: center;
+}
+
+.card_lancamento:hover {
+  position: relative;
+  top: -10px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: all 200ms;
+}
+
+.card_lancamento h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--cor_destaque);
+}
+
+.card_lancamento h5 {
+  font-size: 1em;
+  color: greenyellow;
+}
+
+.card_lancamento p a {
+  color: var(--cor_terciaria);
+  font-weight: bold;
+  padding: 3px;
+}
+.card_lancamento p a:hover {
+  background: var(--cor_secundaria);
+  color: white;
+  border-radius: 4%;
+  transition: all 600ms;
+}
+
+.card_lancamento img {
+  width: 280px;
+  height: 200px;
+  border-radius: 1%;
+  margin-bottom: 10px;
+}
+
 .cards_plataforma,
 .cards_publisher {
   display: flex;
   justify-content: space-evenly;
 }
 
-.area_lancamento {
-  margin-top: 20px;
-  border-radius: 10px;
-  max-width: fit-content;
-}
-
-.area_lancamento:hover {
-  background: var(--cor_terciaria);
-  transition: all 0.2s;
-}
-
-.area_lancamento h4 {
-  font-size: 19px;
-  display: inline-block;
-}
-
-.area_lancamento h4 a {
-  color: white;
-}
-
-.area_lancamento h5 {
-  font-size: 1em;
-  color: var(--cor_destaque);
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 30px;
-}
-
-.area_lancamento p a,
 .area_plataforma p a,
 .area_publisher p a {
   color: black;
@@ -198,7 +237,7 @@ main {
 
 .video_lancamento {
   width: 300px;
-  height: 196px;
+  height: 200px;
   border-radius: 10px;
   display: block;
 }
@@ -404,7 +443,7 @@ main {
     margin-bottom: 10px;
   }
 
-  .lancamentos {
+  .sessao {
     margin-top: 0px;
     padding: 30px 0;
   }
@@ -493,17 +532,9 @@ main {
     margin-bottom: 10px;
   }
 
-  .lancamentos {
+  .sessao {
     margin-top: 0px;
     padding: 30px 0;
-  }
-
-  .area_lancamento h4 {
-    font-size: 14px;
-  }
-
-  .area_lancamento .video_lancamento {
-    width: 220px;
   }
 
   .area_plataforma,

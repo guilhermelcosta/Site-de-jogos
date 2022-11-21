@@ -11,6 +11,7 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Imagens/Steam_Logo.png">
+    <script src="script.js" defer></script>
     <title>Bem-vindo(a) ao Steam</title>
 </head>
 
@@ -61,7 +62,7 @@
             <div class="col-12">
                 <div class="row">
 
-                    <!-- Carrossel -->
+                    <!-- CARROSSEL -->
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 carrossel">
 
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -221,13 +222,13 @@
                         </div>
                     </div>
 
-                    <!-- Sessão de lançamentos -->
+                    <!-- PRINCIPAIS LANÇAMENTOS -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="row lancamentos">
+                            <div class="row sessao">
 
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h3>Principais lançamentos:</h3>
+                                    <h3>Recomendações</h3>
                                 </div>
 
                                 <!-- Botão 'ordenar' -->
@@ -235,7 +236,7 @@
                                     <div class="dropdown">
                                         <a class="btn btn-secondary dropdown-toggle botao_ordenar" href="#"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Ordernar:
+                                            Ordernar
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Popularidade</a></li>
@@ -250,7 +251,7 @@
                                     <div class="dropdown">
                                         <a class="btn btn-secondary dropdown-toggle botao_genero" href="#" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            Gênero:
+                                            Gênero
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="#">Ação</a></li>
@@ -264,109 +265,9 @@
                         </div>
                     </div>
 
-
                     <div class="row">
                         <div class="col-12">
-                            <div class="row cards_lancamento">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Horizon Forbidden West</a></h4>
-                                    <h5>8.5</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/ztwwQByMmmE"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Gears of War 5</a></h4>
-                                    <h5>9.0</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/SEpWlFfpEkU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Metal Gear Solid V</a></h4>
-                                    <h5>10</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/C19ap2M7DDE"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Halo Infinite</a></h4>
-                                    <h5>5.5</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/PyMlV5_HRWk"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row cards_lancamento">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Call of Duty: MW II</a></h4>
-                                    <h5>8</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/r72GP1PIZa0"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Cyberpunk 2077</a></h4>
-                                    <h5>7.0</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/qIcTM8WXFjk"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Woodle Tree Adventures</a></h4>
-                                    <h5>2</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/Px_HlE2RP-c"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Ghost Recon: Breakpoint</a></h4>
-                                    <h5>9</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/ycee_iyKybw"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
+                            <div class="area_lancamento">
                             </div>
                         </div>
                     </div>
@@ -381,10 +282,10 @@
                         </div>
                     </div>
 
-                    <!-- Sessão de Plataformas -->
+                    <!-- PRINCIPAIS PLATAFORMAS -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="row lancamentos">
+                            <div class="row sessao">
 
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <h3>Principais Plataformas</h3>
@@ -454,10 +355,10 @@
                         </div>
                     </div>
 
-                    <!-- Sessão de Publishers -->
+                    <!-- PRINCIPAIS PUBLISHERS -->
                     <div class="row">
                         <div class="col-12">
-                            <div class="row lancamentos">
+                            <div class="row sessao">
 
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                                     <h3>Principais Publishers</h3>
