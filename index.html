@@ -1,597 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/71d3c4b2e6.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/71d3c4b2e6.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Imagens/Steam_Logo.png">
-    <title>Bem-vindo(a) ao Steam</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome > para menus em formato mobile -->
+  <script src="https://kit.fontawesome.com/71d3c4b2e6.js" crossorigin="anonymous"></script>
+  <!-- Instação bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- CSS e JS pessoais -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="Imagens/Steam_Logo.png">
+  <script src="script.js" defer></script>
+  <title>Bem-vindo(a) ao Steam</title>
 </head>
 
 <body>
-    <header class="container-fluid">
+  <header class="container-fluid">
 
-        <nav class="navbar navbar-expand-lg bg-light menu_principal">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img
-                        src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png"
-                        alt="Logo PSN" class="logo"></a>
+    <div class="row">
+      <div class="col-12">
+        <nav>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation ">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse menu_navegacao" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Destaques</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Lançamentos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Plataformas</a>
-                        </li>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Publishers</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2 barra_pesquisa" type="search"
-                            placeholder="Digite o nome do jogo..." aria-label="Search">
-                        <button class="btn btn-outline-success botao_pesquisa" type="submit">Procurar</button>
-                    </form>
-                </div>
-            </div>
+          <a href="index.html"><img
+              src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png"
+              alt="Logo Buzzão" class="logo" /></a>
+
+          <!-- Botões para responsividade em dispositivos mobile -->
+          <input type="checkbox" id="check" placeholder="Botao de check - versao mobile" />
+          <label for="check" class="checkbtn">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+            <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+          </label>
+
+          <ul class="menu_horizontal">
+            <li><a href="#">Destaques</a></li>
+            <li><a href="#">Lançamentos</a></li>
+            <li><a href="#">Plataformas</a></li>
+            <li><a href="#">Desenvolvedoras</a></li>
+            <input type="search" name="Barra de pesquisa" id="barra_pesquisa" placeholder="Pesquisar nome/gênero">
+            <label for="barra_pesquisa"></label>
+            <button id="btn_barraPesquisa" type="submit"></button>
+          </ul>
+          <!--todo: adicionar barra de pesquisa -->
+
         </nav>
-
-    </header>
-
-    <main class="container-fluid">
-
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-
-                    <!-- Carrossel -->
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 carrossel">
-
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <!-- Item 1 -->
-                                <div class="carousel-item active" data-bs-interval="7000">
-                                    <div class="row featurette">
-                                        <!-- Texto -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
-                                            <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">Spider Man
-                                            </h2>
-                                            <div class="texto_carrossel">
-                                                <p class="lead">
-                                                    <b>Sobre:</b> Spider-Man é um jogo eletrônico de ação-aventura
-                                                    desenvolvido pela
-                                                    Insomniac Games e publicado pela Sony Interactive Entertainment. É
-                                                    baseado nos personagens, mitologia e adaptações em outras mídias do
-                                                    super-herói de histórias em quadrinhos Homem-Aranha da Marvel
-                                                    Comics,
-                                                    tendo sido lançado exclusivamente para PlayStation 4 em 7 de
-                                                    setembro de
-                                                    2018.
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Publisher:</b> Sony Interactive Entertainment
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Lançamento:</b> 12 de agosto de 2022
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Plataformas:</b> PC, Playstation 5 e Playstation 4
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Gênero:</b> Ação e aventura
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Avaliação:</b> 8.7
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!-- Vídeo -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
-                                            <iframe class="video_carrossel"
-                                                src="https://www.youtube.com/embed/qIQ3xNqkVC4"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 2 -->
-                                <div class="carousel-item" data-bs-interval="7000">
-                                    <div class="row featurette">
-                                        <!-- Texto -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
-                                            <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">Elden ring
-                                            </h2>
-                                            <div class="texto_carrossel">
-                                                <p class="lead">
-                                                    <b>Sobre:</b> Elden Ring é um jogo de RPG de ação de 2022
-                                                    desenvolvido pela FromSoftware e publicado pela Bandai Namco
-                                                    Entertainment. Foi dirigido por Hidetaka Miyazaki com construção de
-                                                    mundo fornecida pelo escritor de fantasia George R. R. Martin. O
-                                                    jogo
-                                                    foi lançado para PlayStation 4, PlayStation 5, Windows, Xbox One e
-                                                    Xbox
-                                                    Series X/S em 25 de fevereiro.
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Publisher:</b> Bandai Namco Entertainment
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Lançamento:</b> 25 de fevereiro de 2022
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Plataformas:</b> PC, Playstation 5,Playstation 4, Xbox Series X/S
-                                                    e
-                                                    Xbox One
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Gênero:</b> Ação e aventura
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Avaliação:</b> 8.7
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!-- Vídeo -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
-                                            <iframe class="video_carrossel"
-                                                src="https://www.youtube.com/embed/K_03kFqWfqs"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Item 3 -->
-                                <div class="carousel-item" data-bs-interval="7000">
-                                    <div class="row featurette">
-                                        <!-- Texto -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
-                                            <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">God of War:
-                                                Ragnarok</h2>
-                                            <div class="texto_carrossel">
-                                                <p class="lead">
-                                                    <b>Sobre:</b> God of War Ragnarök é um próximo jogo de ação e
-                                                    aventura
-                                                    desenvolvido pelo Santa Monica Studio e será publicado pela Sony
-                                                    Interactive
-                                                    Entertainment (SIE). Está programado para ser lançado mundialmente
-                                                    em 9
-                                                    de
-                                                    novembro de 2022, para playstation 4 (PS4) e PlayStation 5 (PS5).
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Publisher:</b> Sony Interactive Entertainment
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Lançamento:</b> 9 de novembro de 2022
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Plataformas:</b> PC, Playstation 5 e Playstation 4
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Gênero:</b> Ação e aventura, hack n slash
-                                                </p>
-                                                <p class="lead">
-                                                    <b>Avaliação:</b> -
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <!-- Vídeo -->
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
-                                            <iframe class="video_carrossel"
-                                                src="https://www.youtube.com/embed/EE-4GvjKcfs"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sessão de lançamentos -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row lancamentos">
-
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h3>Principais lançamentos:</h3>
-                                </div>
-
-                                <!-- Botão 'ordenar' -->
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle botao_ordenar" href="#"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Ordernar:
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Popularidade</a></li>
-                                            <li><a class="dropdown-item" href="#">Data de lançamento</a></li>
-                                            <li><a class="dropdown-item" href="#">Avaliação</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- Botão 'gênero' -->
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                                    <div class="dropdown">
-                                        <a class="btn btn-secondary dropdown-toggle botao_genero" href="#" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            Gênero:
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Ação</a></li>
-                                            <li><a class="dropdown-item" href="#">Aventura</a></li>
-                                            <li><a class="dropdown-item" href="#">RPG</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row cards_lancamento">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Horizon Forbidden West</a></h4>
-                                    <h5>8.5</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/ztwwQByMmmE"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Gears of War 5</a></h4>
-                                    <h5>9.0</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/SEpWlFfpEkU"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Metal Gear Solid V</a></h4>
-                                    <h5>10</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/C19ap2M7DDE"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Halo Infinite</a></h4>
-                                    <h5>5.5</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/PyMlV5_HRWk"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row cards_lancamento">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Call of Duty: MW II</a></h4>
-                                    <h5>8</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/r72GP1PIZa0"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Cyberpunk 2077</a></h4>
-                                    <h5>7.0</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/qIcTM8WXFjk"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Woodle Tree Adventures</a></h4>
-                                    <h5>2</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/Px_HlE2RP-c"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_lancamento">
-                                    <h4><a href="#">Ghost Recon: Breakpoint</a></h4>
-                                    <h5>9</h5>
-
-                                    <iframe class="video_lancamento" src="https://www.youtube.com/embed/ycee_iyKybw"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <p><a href="">Mais detalhes...</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Botão para carregar mais lançamentos -->
-                    <div class="row">
-                        <div class="col-12 area_carregar">
-                            <button type="button" class="btn btn-primary botao_carregar"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                + Carregar mais lançamentos
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Sessão de Plataformas -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row lancamentos">
-
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h3>Principais Plataformas</h3>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Sessão de Plataformas -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row cards_plataforma">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_plataforma">
-                                    <h4><a href="#">Playstation 5</a></h4>
-
-                                    <img src="Imagens/PS5.webp" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>God Of War</li>
-                                        <li>The Last Of Us</li>
-                                        <li>Uncharted</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_plataforma">
-                                    <h4><a href="#">Xbox Series X/S</a></h4>
-
-                                    <img src="Imagens/XBX.jpg" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>Halo</li>
-                                        <li>Forza</li>
-                                        <li>Gears Of War</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_plataforma">
-                                    <h4><a href="#">Computador</a></h4>
-
-                                    <img src="Imagens/PC.jpg" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>Metal Gear Solid V</li>
-                                        <li>Insurgency Sandstorm</li>
-                                        <li>The Elder Scrolls Online</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Botão para carregar mais lançamentos -->
-                    <div class="row">
-                        <div class="col-12 area_carregar">
-                            <button type="button" class="btn btn-primary botao_carregar"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                + Carregar mais plataformas
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Sessão de Publishers -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row lancamentos">
-
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h3>Principais Publishers</h3>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Sessão de Plataformas -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row cards_publisher">
-
-                                <!-- Cards de lançamento -->
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_publisher">
-                                    <h4><a href="#">Bungie</a></h4>
-
-                                    <img src="Imagens/bungie.jpg" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>Halo</li>
-                                        <li>Destiny 1</li>
-                                        <li>Destiny 2</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_publisher">
-                                    <h4><a href="#">Naughty Dog</a></h4>
-
-                                    <img src="Imagens/ndog.png" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>God of War</li>
-                                        <li>Uncharted</li>
-                                        <li>Crash Bandicoot</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-3 area_publisher">
-                                    <h4><a href="#">Guerrilla Games</a></h4>
-
-                                    <img src="Imagens/guerrilla.jpg" alt="">
-                                    <h5>Principais jogos:</h5>
-                                    <ul>
-                                        <li>Horizon Zero Dawn</li>
-                                        <li>Killzone</li>
-                                        <li>Horizon Forbidden West</li>
-                                    </ul>
-                                    <p><a href="#">Mais detalhes...</a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Botão para carregar mais lançamentos -->
-                    <div class="row">
-                        <div class="col-12 area_carregar">
-                            <button type="button" class="btn btn-primary botao_carregar"
-                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-                                + Carregar mais plataformas
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="row area_sobre">
-
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h2>Sobre:</h2>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti,
-                                        aliquid in quidem repudiandae assumenda saepe cupiditate sequi natus at omnis
-                                        eos voluptatem, obcaecati maxime optio dignissimos ratione! Minus, culpa.
-                                        Ad veniam doloremque, rem facere corrupti, sunt, totam fugiat voluptas accusamus
-                                        ipsum consequatur aspernatur distinctio. Molestiae hic sed quidem totam quia
-                                        optio? Velit repudiandae placeat reiciendis at harum, ab necessitatibus!
-                                        Nesciunt, laboriosam optio maxime ullam voluptatibus quas consequatur porro
-                                        inventore aliquam voluptatem sed vero asperiores earum nemo fuga perspiciatis
-                                        quis, dignissimos magni voluptas officia modi provident. Eligendi atque veniam
-                                        praesentium!
-                                        Asperiores tempore alias nulla deserunt temporibus rerum magnam? Repellat hic
-                                        asperiores impedit eligendi dolor! Animi impedit inventore quo laborum
-                                        necessitatibus quibusdam quasi non ullam similique, minima explicabo qui porro
-                                        temporibus.
-                                    </p>
-                                </div>
-
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-                                    <h2>Editorial</h2>
-                                    <p><b>Redação:</b> Guilherme Lage da Costa</p>
-                                    <p><b>Pesquisa:</b> Guilherme Lage da Costa</p>
-                                    <p><b>Gerente geral:</b> Guilherme Lage da Costa</p>
-                                    <h3>Redes sociais:</h3>
-                                    <a href=""><img src="imagens/redes_sociais.png" alt="Redes sociais"></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="container-fluid">
-
-        <div class="row">
-            <div class="col-12">
-                <div class="row rodape">
-
-                    <div class="col-12 col-sm-10 col-md-10 col-lg-10 copyright">
-                        <P>Copyright 2022 - Disciplina de Desenvolvimento de Interfaces WEB - <b>ICEI PUC Minas</b></P>
-                    </div>
-
-                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 area_logo">
-                        <a class="navbar-brand" href="index.html"><img src="Imagens/logoescuro.png" alt="Logo PSN"
-                                class="logo"></a>
-                    </div>
-
-                </div>
-            </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="container-fluid">
+    <!-- -------------------------------------------------- -->
+    <!-- CARROSSEL - Início -->
+    <!-- -------------------------------------------------- -->
+    <div id="carrossel" class="col-12 col-sm-12 col-md-12 col-lg-12">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner">
+          <!-- Item 1 -->
+          <div class="carousel-item active" data-bs-interval="7000">
+            <div class="row featurette">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">Spider Man 2</h2>
+                <div class="texto_carrossel">
+                  <p class="lead">
+                    <b>Sobre:</b> Spider-Man é um jogo eletrônico de ação-aventura
+                    desenvolvido pela
+                    Insomniac Games e publicado pela Sony Interactive Entertainment. É
+                    baseado nos personagens, mitologia e adaptações em outras mídias do
+                    super-herói de histórias em quadrinhos Homem-Aranha da Marvel
+                    Comics,
+                    tendo sido lançado exclusivamente para PlayStation 4 em 7 de
+                    setembro de
+                    2018.
+                  </p>
+                  <p class="lead">
+                    <b>Publisher:</b> Sony Interactive Entertainment
+                  </p>
+                  <p class="lead">
+                    <b>Lançamento:</b> 12 de agosto de 2022
+                  </p>
+                  <p class="lead">
+                    <b>Plataformas:</b> PC, Playstation 5 e Playstation 4
+                  </p>
+                  <p class="lead">
+                    <b>Gênero:</b> Ação e aventura
+                  </p>
+                  <p class="lead">
+                    <b>Avaliação:</b> 8.7
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
+                <iframe class="video_carrossel" src="https://www.youtube.com/embed/qIQ3xNqkVC4"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
 
-    </footer>
+          <!-- Item 2 -->
+          <div class="carousel-item" data-bs-interval="7000">
+            <div class="row featurette">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">Elden ring
+                </h2>
+                <div class="texto_carrossel">
+                  <p class="lead">
+                    <b>Sobre:</b> Elden Ring é um jogo de RPG de ação de 2022
+                    desenvolvido pela FromSoftware e publicado pela Bandai Namco
+                    Entertainment. Foi dirigido por Hidetaka Miyazaki com construção de
+                    mundo fornecida pelo escritor de fantasia George R. R. Martin. O
+                    jogo
+                    foi lançado para PlayStation 4, PlayStation 5, Windows, Xbox One e
+                    Xbox
+                    Series X/S em 25 de fevereiro.
+                  </p>
+                  <p class="lead">
+                    <b>Publisher:</b> Bandai Namco Entertainment
+                  </p>
+                  <p class="lead">
+                    <b>Lançamento:</b> 25 de fevereiro de 2022
+                  </p>
+                  <p class="lead">
+                    <b>Plataformas:</b> PC, Playstation 5,Playstation 4, Xbox Series X/S
+                    e
+                    Xbox One
+                  </p>
+                  <p class="lead">
+                    <b>Gênero:</b> Ação e aventura
+                  </p>
+                  <p class="lead">
+                    <b>Avaliação:</b> 8.7
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
+                <iframe class="video_carrossel" src="https://www.youtube.com/embed/K_03kFqWfqs"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
 
+          <!-- Item 3 -->
+          <div class="carousel-item" data-bs-interval="7000">
+            <div class="row featurette">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1 titulo_carrossel">God of War:
+                  Ragnarok</h2>
+                <div class="texto_carrossel">
+                  <p class="lead">
+                    <b>Sobre:</b> God of War Ragnarök é um próximo jogo de ação e
+                    aventura
+                    desenvolvido pelo Santa Monica Studio e será publicado pela Sony
+                    Interactive
+                    Entertainment (SIE). Está programado para ser lançado mundialmente
+                    em 9
+                    de
+                    novembro de 2022, para playstation 4 (PS4) e PlayStation 5 (PS5).
+                  </p>
+                  <p class="lead">
+                    <b>Publisher:</b> Sony Interactive Entertainment
+                  </p>
+                  <p class="lead">
+                    <b>Lançamento:</b> 9 de novembro de 2022
+                  </p>
+                  <p class="lead">
+                    <b>Plataformas:</b> PC, Playstation 5 e Playstation 4
+                  </p>
+                  <p class="lead">
+                    <b>Gênero:</b> Ação e aventura, hack n slash
+                  </p>
+                  <p class="lead">
+                    <b>Avaliação:</b> -
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-12 col-lg-6 order-md-1">
+                <iframe class="video_carrossel" src="https://www.youtube.com/embed/EE-4GvjKcfs"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------------- -->
+    <!-- CARROSSEL - Término -->
+    <!-- -------------------------------------------------- -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <!-- Área de recomendações de jogos -->
+    <section id="area_recomendacoes">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="titulo_sessao">Recomendações</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="areaCard_recomendacoes"></div>
+        </div>
+      </div>
+
+      <!-- Botão para carregar mais recomendações: limite de 20 -->
+      <div class="row">
+        <div class="col-12">
+          <button type="button" id="btn_carregarMaisJogos" class="btn btn-primary botao_carregar">
+            + Carregar jogos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Área de plataformas -->
+    <section id="area_plataformas">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="titulo_sessao">Principais plataformas</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="areaCard_plataformas"></div>
+        </div>
+      </div>
+
+      <!-- Botão para carregar mais plataformas: limite de 50+ -->
+      <div class="row">
+        <div class="col-12">
+          <button type="button" id="btn_carregarMaisPlataformas" class="btn btn-primary botao_carregar">
+            + Carregar paltaformas
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Área de desenvolvedoras de jogos -->
+    <section id="area_desenvolvedoras">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="titulo_sessao">Principais desenvolvedoras</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="areaCard_desenvolvedoras"></div>
+        </div>
+      </div>
+
+      <!-- Botão para carregar mais desenvolvedoras: limite de 10 -->
+      <div class="row">
+        <div class="col-12">
+          <button type="button" id="btn_carregarMaisDesenvolvedoras" class="btn btn-primary botao_carregar">
+            + Carregar desenvolvedoras
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="area_redacao">
+      <div class="row">
+        <div class="col-12">
+
+          <div class="row">
+            <div id="texto_sobre" class="col-sm-12 col-md-8 col-lg-8">
+              <h2>Sobre:</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti,
+                aliquid in quidem repudiandae assumenda saepe cupiditate sequi natus at omnis
+                eos voluptatem, obcaecati maxime optio dignissimos ratione! Minus, culpa.
+                Ad veniam doloremque, rem facere corrupti, sunt, totam fugiat voluptas accusamus
+                ipsum consequatur aspernatur distinctio. Molestiae hic sed quidem totam quia
+                optio? Velit repudiandae placeat reiciendis at harum, ab necessitatibus!
+                Nesciunt, laboriosam optio maxime ullam voluptatibus quas consequatur porro
+                inventore aliquam voluptatem sed vero asperiores earum nemo fuga perspiciatis
+                quis, dignissimos magni voluptas officia modi provident. Eligendi atque veniam
+                praesentium!
+                Asperiores tempore alias nulla deserunt temporibus rerum magnam? Repellat hic
+                asperiores impedit eligendi dolor! Animi impedit inventore quo laborum
+                necessitatibus quibusdam quasi non ullam similique, minima explicabo qui porro
+                temporibus.
+              </p>
+            </div>
+
+            <div id="texto_editorial" class="col-sm-12 col-md-4 col-lg-4">
+              <h2>Editorial</h2>
+              <p><b>Redação:</b> Guilherme Lage da Costa</p>
+              <p><b>Curso:</b> Engenharia de Software - PUC Minas</p>
+              <p><b>Matrícula</b> 792939</p>
+              <h3>Redes sociais:</h3>
+              <a href=""><img src="imagens/redes_sociais.png" alt="Redes sociais"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="container-fluid">
+
+    <div class="row">
+      <div id="texto_rodape" class="col-12">
+        <P>Copyright 2022 - Disciplina de Desenvolvimento de Interfaces WEB - <b>ICEI PUC Minas</b></P>
+        <img src="https://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png" alt="Logo PSN">
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
 </body>
 
 </html>
