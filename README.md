@@ -2,6 +2,8 @@
 
 Este site foi criado como trabalho à disciplina de Desenvolvimento de Interfaces Web - PUC Minas.
 
+https://guilhermelcosta.github.io/Site-de-jogos/
+
 Os seguintes requisitos foram abarcados neste trabalho:
 
 * Botões "+ Carregar mais", que adicionam mais informações à tela, dependendo da sessão em que é utilizado (recomendações, plataformas ou desenvolvedoras).
