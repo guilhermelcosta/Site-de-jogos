@@ -170,3 +170,40 @@ btn_carregarMaisDesenvolvedoras.addEventListener('click', () => {
       document.querySelector('#areaCard_desenvolvedoras').innerHTML = str;
     });
 });
+
+// -----------------------------------------------------------------------
+// Para filtrar as informações que serão impressas na tela.
+// -----------------------------------------------------------------------
+let input_pesquisa = document.querySelector('#barra_pesquisa');
+let btn_pesquisa = document.querySelector('#btn_barraPesquisa');
+
+btn_pesquisa.addEventListener('click', () => {
+  fetch('https://api.rawg.io/api/games?key=965cf8a1fa7f420387e453ca63050020')
+    .then((resposta) => resposta.json())
+    .then((data) => {
+      let str = '';
+
+      for (let i = 0; i < data.results.length; i++) {
+        let jogo = data.results[i];
+        var generos = [];
+        // Confere os gêneros atribuídos do jogo.
+        for (let j = 0; j < jogo.genres.length; j++) {
+          generos.push(data.results[i].genres[j].name);
+        }
+        console.log(generos);
+
+        if (
+          jogo.name == input_pesquisa.value ||
+          generos.includes(input_pesquisa.value)
+        ) {
+          str += `<div class="card_recomendacao">
+          <h4>${jogo.name} (${jogo.platforms[0].platform.name})</h4>
+          <h5>${jogo.rating}</h5>
+          <img src="${jogo.background_image}" alt="Capa do jogo">
+          <p><a href="detalhes.html?id=${jogo.id}">Mais detalhes</a></p>
+        </div>`;
+        }
+        document.querySelector('#areaCard_recomendacoes').innerHTML = str;
+      }
+    });
+});
