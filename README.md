@@ -13,9 +13,3 @@ Os seguintes requisitos foram abarcados neste trabalho:
     * Gênero do jogo: em inglês e com primeira letra maiúscula. Por exemplo: Action, RPG, Puzzle, Adventure, Shooter ou Indie.
 
     * Plataforma lançada: escrito com primeras letras maíusculas. Por exemplo: PC, Xbox Series S/X, Xbox One, Xbox 360, PlayStation 5, PlayStation 4, PlayStation 3, Nintendo Switch, dentre outras.
-
-Este site foi criado para funcionar como um portal de games. Nele, é possível visualizar:
-
-🎮 Os jogos mais populares do momento  
-🎮 Filtrar de acordo com as suas categorias  
-🎮 Atualizar aa lista de jogos apresentados  
