@@ -186,15 +186,21 @@ btn_pesquisa.addEventListener('click', () => {
       for (let i = 0; i < data.results.length; i++) {
         let jogo = data.results[i];
         var generos = [];
+        var plataformas = [];
+
         // Confere os gêneros atribuídos do jogo.
         for (let j = 0; j < jogo.genres.length; j++) {
           generos.push(data.results[i].genres[j].name);
         }
-        console.log(generos);
+        // Confere as plataformas em que o jogo foi lançado.
+        for (let k = 0; k < jogo.platforms.length; k++) {
+          plataformas.push(data.results[i].platforms[k].platform.name);
+        }
 
         if (
           jogo.name == input_pesquisa.value ||
-          generos.includes(input_pesquisa.value)
+          generos.includes(input_pesquisa.value) ||
+          plataformas.includes(input_pesquisa.value)
         ) {
           str += `<div class="card_recomendacao">
           <h4>${jogo.name} (${jogo.platforms[0].platform.name})</h4>
